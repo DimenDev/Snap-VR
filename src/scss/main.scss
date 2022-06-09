@@ -1,0 +1,162 @@
+@use "CustomBS" as *;
+@use "variables" as *;
+
+.mb-6 {
+  margin-bottom: 10rem;
+}
+
+.trapezoid-bg {
+  width: 60%;
+  height: 30rem;
+  transform: skew(-25deg);
+  background: rgb(145, 229, 5);
+  background: radial-gradient(
+    circle,
+    rgba(145, 229, 5, 1) 13%,
+    rgba(175, 229, 58, 1) 91%
+  );
+  border-radius: 2rem;
+}
+
+.trapezoid-reverse {
+  transform: skew(-25deg);
+  background: rgb(145, 229, 5);
+  background: radial-gradient(
+    circle,
+    rgba(145, 229, 5, 1) 13%,
+    rgba(175, 229, 58, 1) 91%
+  );
+  border-radius: 2rem;
+  width: 125%;
+  height: 30rem;
+  left: -48%;
+
+  & > img {
+    left: 96%;
+  }
+}
+
+.images {
+  z-index: 10;
+  top: 50%;
+  left: 55%;
+  transform: skew(25deg) translate(-50%, -50%);
+  height: 100%;
+}
+
+.services {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  background: conic-gradient(from 148.58deg at 34.68% 114.53%, #2A3538 0deg, #212B2E 212.3deg, #070B0F 357.87deg, #2A3538 360deg);
+  border: 3px solid #F5F5F5;
+  border-radius: 50px;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, minmax(min(200px, 100%), 1fr));
+  }
+  @include media-breakpoint-up(lg) {
+  grid-template-columns: repeat(3, minmax(min(200px, 100%), 1fr));
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__icon {
+    width: 200px;
+    height: 200px;
+    background: rgb(145, 229, 5);
+    background: radial-gradient(
+      circle,
+      rgba(145, 229, 5, 1) 13%,
+      rgba(175, 229, 58, 1) 91%
+    );
+    position: relative;
+    border-radius: 3.125rem;
+
+    & > svg {
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.capsule-1 {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+   background: conic-gradient(from 148.58deg at 34.68% 114.53%, #2A3538 0deg, #212B2E 212.3deg, #070B0F 357.87deg, #2A3538 360deg);
+  border: 3px solid #F5F5F5;
+  border-radius: 20px;
+  margin-bottom: 1.3rem;
+
+  & > p {
+    margin-bottom: 0;
+    justify-self: start;
+  }
+
+
+  &__icon {
+    width: 20px;
+    fill: $primary;
+  }
+}
+
+.capsule-2 {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  background: rgb(145, 229, 5);
+  background: radial-gradient(
+      circle,
+      rgba(145, 229, 5, 1) 13%,
+      rgba(175, 229, 58, 1) 91%
+    );
+  border: 3px solid $primary;
+  border-radius: 20px;
+  margin-bottom: 1.3rem;
+
+  & > p {
+    margin-bottom: 0;
+    justify-self: start;
+    color: $secondary;
+  }
+
+
+  &__icon {
+    width: 20px;
+    fill: $secondary;
+  }
+}
+
+.btn-opacity {
+  transition: opacity 250ms ease-in-out;
+
+  &:hover {
+  opacity: 0.9;
+}
+}
+
+.rounded-6 {
+  border-radius: 2rem;
+}
+
+.h-opacity {
+  transition: 250ms opacity ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

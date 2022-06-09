@@ -1,0 +1,11 @@
+@use 'CustomBS' as *;
+
+.w-90 {
+    
+
+    @include media-breakpoint-up(lg) {
+        width: 90%;
+        max-width: 60ch;
+    }
+}
+
