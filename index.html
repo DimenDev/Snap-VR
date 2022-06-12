@@ -24,11 +24,76 @@
   </head>
   <body class="bg-secondary">
 
+    <!-- modals -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-secondary text-white">
+      <div class="container-fluid p-0">
+       <div class="row">
+        <div class="col-7 p-3">
+      <div class="modal-header text-center">
+        <h4 class="modal-title" id="exampleModalToggleLabel">Create your account</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signupform">
+    <div class="mb-3">
+    <label for="username" class="form-label">Name</label>
+    <input type="text" class="form-control" id="username" required minlength="6" maxlength="30">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else. <span class="text-primary">unless they give us money.</span></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+    <div id="passwordHelpBlock" class="form-text" required>
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or <span class="text-danger">EMOJIS.</span> <span class="text-primary">I hate gen-z-ers</span>
+</div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    <label class="form-check-label form-text m-0 fst-italic" for="exampleCheck1">I agree to share my information to anyone giving money to SNAP</label>
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button id="signupbutton" class="btn btn-primary mx-auto" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" type="submit">Sign Up!</button>
+      </div>
+      </div>
+      <div class="col-5">
+      <img class="img-fluid" src="./src/images/Modal-signup.jpg" alt="">
+      </div>
+    </div>
+    </div> 
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-secondary text-white">
+      <div class="modal-header">
+        <h4 class="modal-title text-primary" id="exampleModalToggleLabel2">Your registered succesfully!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        No we are able to send you stuff you dont want to your email and sell your information online for a profit! Thank you so much!
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-dismiss="modal">Continue >></button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- navigation bar -->
 
     <nav class="navbar navbar-expand-lg bg-secondary navbar-dark mb-5">
       <div class="container">
-        <a href="#" class="navbar-brand text-primary fw-bold">SNAP</a>
+        <a href="./index.html" class="navbar-brand text-primary fw-bold">SNAP</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,19 +108,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-lg-center w-100">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Plans</a>
+          <a class="nav-link" aria-current="page" href="./pages/underconstruction.html">Plans</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="./pages/underconstruction.html">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Development</a>
+          <a class="nav-link" aria-current="page" href="./pages/underconstruction.html">Development</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="./pages/underconstruction.html">Contact Us</a>
         </li>
       </ul>
-        <button class="btn btn-outline-primary text-nowrap" type="submit">Sign Up</button>
+        <button data-bs-toggle="modal" href="#exampleModalToggle" role="button" class="btn btn-outline-primary text-nowrap" type="submit">Sign Up</button>
       </div>
     </nav>
 
@@ -67,7 +132,7 @@
           <div class="col-lg-7">
             <h1 class="display-3 lh-2 mb-5 text-center text-lg-start">Take a leap and explore your new <span class='text-primary'>VR</span> World</h1>
             <p class="lead w-90 mb-5 text-center text-lg-start">We're adding a new perspective, now with enhanced reality you can mix the worlds between physical and digital.</p>
-            <button class="btn btn-primary text-black btn-lg fw-bold mx-auto mx-lg-0 d-block btn-scale">Explore Now</button>
+            <button class="btn btn-primary text-black btn-lg fw-bold mx-auto mx-lg-0 d-block btn-scale" data-bs-toggle="modal" href="#exampleModalToggle">Explore Now</button>
           </div>
           <div class="col-lg-5 d-none d-lg-block position-relative trapezoid-bg">
             <img class="d-none d-lg-block img-fluid images position-absolute" src="/src/images/pngegg.png">
@@ -180,7 +245,7 @@
         <div class="bg-primary text-center text-secondary py-5 px-md-5 border-primary mb-6 rounded-6">
         <h1 class="display-3 mb-5 px-4">Get Started With Snap</h1>
         <p class="fw-bold mb-5 fs-5 px-5">Be the first to explore the breathtaking landscapes of Virtual Reality and experience the world through a new lens</p>
-        <button class="btn btn-secondary btn-lg text-primary btn-opacity">Get Started</button>
+        <button class="btn btn-secondary btn-lg text-primary btn-opacity" data-bs-toggle="modal" href="#exampleModalToggle">Get Started</button>
       </div>
       </div>
     </section>
@@ -208,6 +273,8 @@
         </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="module" src="./dist/formvalidator.js"></script>
 
   </body>
 </html>
